@@ -66,7 +66,7 @@ const loadDataByLevel = async (level) => {
         const card = document.createElement("div");
 
         card.innerHTML = `  
-              <div class="bg-white text-center hover:bg-cyan-50 flex flex-col rounded-lg gap-5 p-8 h-[30vh] cursor-pointer justify-center transition-opacity duration-500 ease-in-out opacity-0">
+              <div class="bg-white text-center hover:bg-cyan-50 flex flex-col rounded-lg gap-5 p-8  cursor-pointer justify-center transition-opacity duration-500 ease-in-out opacity-0">
                   <h3 id="main-word" class="text-3xl font-semibold font-[poppins]">${
                     element?.word
                   }</h3>
