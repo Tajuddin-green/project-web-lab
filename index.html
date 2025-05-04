@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="white">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>English | জানালা</title>
+    <style>
+      .opacity-0 {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="">
+    <header class="">
+      <div id="nav-bar" class="hidden">
+        <nav
+          class="flex flex-wrap md:justify-between px-[5%] h-[100px] items-center bg-gray-300/40 backdrop-blur-sm shadow-sm top-0 left-0 fixed w-full z-10"
+        >
+          <div>
+            <h2 class="flex items-center font-semibold text-3xl cursor-pointer">
+              <span class="font-[poppins]"> English </span>
+              <span><img src="./assets/logo.png" alt="" /> </span>
+              <span class="font-[Hind_Siliguri]">জানালা </span>
+            </h2>
+          </div>
+          <div>
+            <ul class="flex gap-5">
+              <li>
+                <button
+                  id="faq-btn"
+                  onclick="smoothTransition('faq')"
+                  class="btn bg-transparent hover:bg-[#422AD5] hover:text-white text-[#422AD5] border-2 border-blue-700"
+                >
+                  <svg
+                    class="hover:text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    color="#246adf"
+                    fill="none"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      d="M10 9C10 7.89543 10.8954 7 12 7C13.1046 7 14 7.89543 14 9C14 9.39815 13.8837 9.76913 13.6831 10.0808C13.0854 11.0097 12 11.8954 12 13V13.5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M11.992 17H12.001"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  FAQ
+                </button>
+              </li>
+
+              <li class="">
+                <button
+                  id="learn-btn"
+                  onclick="smoothTransition('learn')"
+                  class="btn bg-transparent hover:bg-[#422AD5] hover:text-white text-[#422AD5] border-2 border-blue-700"
+                >
+                  <svg
+                    class="hover:text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    color="#246adf"
+                    fill="none"
+                  >
+                    <path
+                      d="M5.68421 13.143L12.5263 16.6063L22 11.6587V14.4523C22 15.1711 21.5855 15.8333 20.9171 16.1823L14.5609 19.5019C13.2948 20.1631 11.756 20.1662 10.4869 19.51L4.77515 16.5569C3.06346 15.6719 2 13.9811 2 12.1447M2 12.1447C2 10.1029 4.28574 8.77492 6.22844 9.68804L12.5263 12.6482L22 7.70056L15.7196 4.57498C14.0678 3.75288 12.076 3.81601 10.4868 4.74084L4.22963 8.38212C2.84349 9.18877 2 10.6122 2 12.1447Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Learn
+                </button>
+              </li>
+              <li class="">
+                <button
+                  id="logout-btn"
+                  class="btn bg-transparent hover:bg-[#422AD5] hover:text-white text-[#422AD5] border-2 border-blue-700"
+                >
+                  <svg
+                    class="hover:text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    color="#246adf"
+                    fill="none"
+                  >
+                    <path
+                      d="M15 17.625C14.9264 19.4769 13.3831 21.0494 11.3156 20.9988C10.8346 20.987 10.2401 20.8194 9.05112 20.484C6.18961 19.6768 3.70555 18.3203 3.10956 15.2815C3 14.723 3 14.0944 3 12.8373L3 11.1627C3 9.90561 3 9.27705 3.10956 8.71846C3.70555 5.67965 6.18961 4.32316 9.05112 3.51603C10.2401 3.18064 10.8346 3.01295 11.3156 3.00119C13.3831 2.95061 14.9264 4.52307 15 6.37501"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M21 12H10M21 12C21 11.2998 19.0057 9.99153 18.5 9.5M21 12C21 12.7002 19.0057 14.0085 18.5 14.5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Logout
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <section
+        id="hero-section"
+        class="flex items-center justify-between px-[5%]"
+      >
+        <div id="hero-left-div" class="">
+          <div>
+            <h2 class="text-5xl font-bold font-[poppins]">
+              <span class="text-[#00BCFF]">English </span>is Easy!!
+            </h2>
+          </div>
+          <div class="my-5">
+            <p class="font-[Hind_Siliguri]">
+              আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+              <br />
+              আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে
+              <br />
+              যাবে অন্য একটি Level এ
+            </p>
+          </div>
+          <div class="flex flex-col gap-5">
+            <input
+              id="username"
+              type="text"
+              class="input outline-none"
+              placeholder="Enter Your Name"
+            />
+            <input
+              id="password"
+              type="text"
+              class="input outline-none"
+              placeholder="Enter Your Password (123456)"
+            />
+
+            <button
+              id="login-btn"
+              class="btn bg-blue-700 w-[10rem] hover:bg-white hover:text-blue-700 text-white"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+        <div id="hero-right-div" class="">
+          <img src="./assets/hero-student.png" alt="" />
+        </div>
+      </section>
+    </header>
+
+    <section class="mx-auto w-[90%]">
+      <main>
+        <section id="learn-section" class="hidden mt-[20vh] pt-[150px]">
+          <h3 class="font-semibold text-3xl text-center font-[poppins]">
+            <span class="text-[#00BCFF]">Let's</span>
+            <span>Learn Vocabularies</span>
+          </h3>
+
+          <div
+            id="btn-container"
+            class="flex gap-8 text-center my-8 justify-center items-center flex-wrap"
+          >
+            <!-- comes dynamically -->
+          </div>
+
+          <div
+            id="default-message"
+            class="h-44 rounded-lg flex justify-center items-center text-center flex-col gap-3 bg-gray-100"
+          >
+            <p class="font-[Hind_Siliguri] text-[1rem]">
+              আপনি এখনো কোন
+              <span class="font-[poppins]">Lesson Select</span> করেন নি
+            </p>
+            <h2 class="font-[Hind_Siliguri] text-[2.5rem]">
+              একটি <span class="font-[poppins]">Lesson Select</span> করুন।
+            </h2>
+          </div>
+          <!-- loader starts here -->
+          <div id="loader" class="items-center text-center hidden">
+            <p class="loading loading-dots loading-xl"></p>
+          </div>
+
+          <!-- modal section starts here -->
+
+          <div id="modal-section"></div>
+
+          <div id="error-message">
+            <div
+              id=""
+              class="p-10 rounded-lg flex justify-center items-center text-center flex-col gap-3 bg-gray-100"
+            >
+              <div class="text-center">
+                <img src="./assets/alert-error.png" alt="" />
+              </div>
+              <p class="font-[Hind_Siliguri] text-[1rem]">
+                এই <span class="font-[poppins]">Lesson</span> এ এখনো কোন
+                <span class="font-[poppins]">Vocabulary</span> যুক্ত করা হয়নি।
+              </p>
+              <h2 class="font-[Hind_Siliguri] text-[2.5rem]">
+                নেক্সট <span class="font-[poppins]">Lesson</span> এ যান
+              </h2>
+            </div>
+          </div>
+
+          <div
+            id="card-container"
+            class="bg-gray-100 rounded-xl grid grid-cols-1 md:grid-cols-3 gap-5 p-5"
+          >
+            <!-- Dynamically comes -->
+          </div>
+        </section>
+
+        <section id="faq-section" class="my-[20vh] hidden pt-[150px]">
+          <h3
+            class="font-semibold text-3xl text-center font-[poppins] mb-[4rem]"
+          >
+            <span class="text-[#00BCFF]">Frequently </span>
+            <span>Asked Questions</span>
+          </h3>
+
+          <div class="collapse bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-1" checked="checked" />
+            <div class="collapse-title font-semibold text-xl">
+              What are the difference between var, let, and const?
+            </div>
+            <div class="collapse-content text-sm">
+              <p>
+                <strong>var:</strong> Function-scoped, hoisted as
+                <strong>undefined</strong>, allows redeclaration and
+                reassignment.
+              </p>
+
+              <p>
+                <strong>let:</strong> Block-scoped, hoisted but in the
+                <strong>Temporal Dead Zone</strong>, allows reassignment but no
+                redeclaration.
+              </p>
+
+              <p>
+                <strong>const:</strong> Block-scoped, hoisted (<strong
+                  >Temporal Dead Zone</strong
+                >), no redeclaration or reassignment, but object properties can
+                change.
+              </p>
+
+              <p>
+                <strong>Best Practice:</strong> Use <strong>const</strong> by
+                default, <strong>let</strong> when needed, and avoid
+                <strong>var</strong>.
+              </p>
+            </div>
+          </div>
+          <div class="collapse bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title font-semibold text-xl">
+              What are the difference between map(), forEach(), and filter()?
+            </div>
+            <div class="collapse-content text-sm">
+              <p>
+                <strong>map():</strong> Transforms each element and returns a
+                new array with modified values.
+              </p>
+
+              <p>
+                <strong>forEach():</strong> Iterates over elements but does not
+                return anything (used for side effects).
+              </p>
+
+              <p>
+                <strong>filter():</strong> Returns a new array with elements
+                that pass a condition (true values).
+              </p>
+            </div>
+          </div>
+          <div class="collapse bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title font-semibold text-xl">
+              Explain arrow functions and how they are different from regular
+              functions
+            </div>
+            <div class="collapse-content text-sm">
+              <strong>Syntax:</strong>
+              Arrow functions are shorter and cleaner than regular functions.
+              Regular functions require the function keyword, while arrow
+              functions use =>.
+
+              <strong> this Behavior:</strong>
+              Arrow functions do not have their own this; they inherit it from
+              their surrounding scope. Regular functions create their own this,
+              which changes based on how they are called.
+
+              <strong> Arguments Object:</strong>
+              Regular functions have an arguments object, which holds all passed
+              parameters. Arrow functions do not have arguments; they rely on
+              rest parameters instead.
+
+              <strong> Constructor Usage:</strong>
+              Regular functions can be used as constructors with the new
+              keyword. Arrow functions cannot be used as constructors.
+
+              <strong> Best Use Cases:</strong>
+              Arrow functions are great for short functions, especially in array
+              methods (map, filter). Regular functions are better when this or
+              arguments is needed, like in object methods or constructors.
+            </div>
+          </div>
+          <div class="collapse bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title font-semibold text-xl">
+              How JavaScript Promises work?
+            </div>
+            <div class="collapse-content text-sm">
+              A Promise in JavaScript is used to handle asynchronous operations.
+              It represents a value that might be available now, later, or
+              never.
+
+              <strong>Promise States</strong><br />
+              <strong> A Promise has three states:</strong>
+              Pending → Initial state, neither fulfilled nor rejected. Fulfilled
+              → The operation was successful. Rejected → The operation failed.
+              <br />
+
+              A Promise starts in a pending state. It either resolves
+              (fulfilled) or rejects (failed). You handle the result using
+              <strong>.then()</strong> for success and
+              <strong>.catch()</strong> for errors.
+              <br />
+              <strong> Key Methods</strong>
+              .then(callback) → Runs when the Promise is fulfilled.
+              .catch(callback) → Runs when the Promise is rejected.
+              .finally(callback) → Runs regardless of success or failure.
+            </div>
+          </div>
+          <div class="collapse bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title font-semibold text-xl">
+              How closures work in JavaScript"
+            </div>
+            <div class="collapse-content text-sm">
+              <p><strong>How Closures Work in JavaScript</strong></p>
+
+              <p>
+                A <strong>closure</strong> is a function that
+                <strong>remembers</strong> the variables from its outer scope,
+                even after the outer function has finished executing.
+              </p>
+
+              <p><strong>How It Works:</strong></p>
+              <p>
+                When a function is defined inside another function, it
+                <strong>captures</strong> the outer function’s variables.
+              </p>
+              <p>
+                Even if the outer function returns, the inner function still has
+                access to those variables.
+              </p>
+
+              <p><strong>Why Closures Are Useful?</strong></p>
+              <p>
+                <strong>Data Privacy:</strong> You can create private variables
+                that are not accessible from outside.
+              </p>
+              <p>
+                <strong>State Persistence:</strong> Values remain in memory
+                between function calls.
+              </p>
+              <p>
+                <strong>Function Factories:</strong> Generate customized
+                functions dynamically.
+              </p>
+              <p>
+                <strong>Callbacks & Event Handlers:</strong> Used in
+                asynchronous programming.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer
+        class="flex justify-between bg-gray-50 items-center p-10 rounded-xl"
+      >
+        <div class="flex flex-col gap-2">
+          <h2 class="flex items-center text-2xl">
+            <span class="font-[poppins]"> English </span>
+            <span><img src="./assets/logo.png" alt="" /> </span>
+            <span class="font-[Hind_Siliguri]">জানালা </span>
+          </h2>
+          <p>ইংরেজি শিখুন সহজে</p>
+          <p>Providing ED-Tech Applications since 2025</p>
+        </div>
+        <div>
+          <p>FOLLOW US</p>
+          <ul class="flex gap-5 items-center">
+            <li>
+              <a
+                href="
+              "
+                ><img src="./assets/fb-thumb.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/youtube-thumb.png" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/instagram-thumb.png" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/github-thumb.png" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </section>
+    <script src="login.js"></script>
+    <script src="smootheTransition.js"></script>
+    <script src="index.js"></script>
+    <script src="pronounceWord.js"></script>
+    <script src="openModal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
