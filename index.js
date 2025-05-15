@@ -91,7 +91,7 @@ const loadDataByLevel = async (level) => {
                           </button>
                           </div>
                           </div>                        
-                          `;
+                      `;
 
         cardContainer.appendChild(card);
         setTimeout(
