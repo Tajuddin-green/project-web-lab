@@ -42,6 +42,7 @@ const loadDataByLevel = async (level) => {
 
 
   const searchCardContainer = document.getElementById("founded-data");
+  
 
   const cardContainer = document.getElementById("card-container");
 

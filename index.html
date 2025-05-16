@@ -15,9 +15,7 @@
       rel="stylesheet"
       type="text/css"
     />
-    <script 
-    src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <title>English | জানালা</title>
     <style>
@@ -42,6 +40,15 @@
           </div>
           <div>
             <ul class="flex gap-5">
+               <li class="">
+                <button
+                  id="search-btn"
+                  class="btn bg-transparent hover:bg-[#422AD5] hover:text-white text-[#422AD5] border-2 border-blue-700"
+                >
+          
+                  Search
+                </button>
+              </li>
               <li>
                 <button
                   id="faq-btn"
@@ -163,11 +170,12 @@
               যাবে অন্য একটি Level এ
             </p>
           </div>
+
           <div class="flex flex-col gap-5">
             <input
               id="username"
               type="text"
-              value="abd"
+              value=""
               class="input outline-none"
               placeholder="Enter Your Name"
             />
@@ -175,7 +183,7 @@
               id="password"
               type="text"
               class="input outline-none"
-              value="123456"
+              value=""
               placeholder="Enter Your Password (123456)"
             />
 
@@ -197,28 +205,27 @@
       <main>
         <section id="learn-section" class="hidden mt-[20vh] pt-[150px]">
 
-<!-- newly added -->
-          <div action="" class="mb-15">
 
-            <input type="text" class="w-full py-2 items-center text-xl text-center rounded-lg" id="input"><span>
 
-              <button id="submit" class=" py-2 items-center text-center text-xl rounded-lg bg-blue-600 cursor-pointer text-white w-full">Search</button>
+          <!-- newly added -->
+          <div id="search-section" action="" class="mb-15 hidden">
+            <input
+              type="text"
+              class="w-full py-2 items-center text-xl text-center rounded-lg"
+              id="input"
+            /><span>
+              <button
+                id="submit"
+                class="py-2 items-center text-center text-xl rounded-lg bg-blue-600 cursor-pointer text-white w-full"
+              >
+                Search
+              </button>
             </span>
-
           </div>
-
 
           <div class="" id="founded-data">
-
-
-<!-- Dynamic searched card  -->
-
+            <!-- Dynamic searched card  -->
           </div>
-
-
-
-
-
 
           <h3 class="font-semibold text-3xl text-center font-[poppins]">
             <span class="text-[#00BCFF]">Let's</span>
@@ -251,7 +258,9 @@
 
           <!-- modal section starts here -->
 
-          <div id="modal-section"></div>
+          <div id="modal-section">
+            <!-- comes dynamically -->
+          </div>
 
           <div id="error-message">
             <div

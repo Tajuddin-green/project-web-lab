@@ -1226,6 +1226,10 @@ const allData = [
   },
 ];
 
+const searchBtn = document.getElementById("search-btn")
+searchBtn.addEventListener("click", ()=>{
+    document.getElementById("search-section").classList.remove("hidden")
+})
 
 document.getElementById("submit").addEventListener("click", () => {
   const search = document.getElementById("input").value.trim().toLowerCase();
