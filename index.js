@@ -6,6 +6,9 @@ const loadLesson = async () => {
   displayBtn(data.data);
 };
 
+
+
+
 const displayBtn = (categories) => {
   const btnContainer = document.getElementById("btn-container");
 
@@ -36,9 +39,17 @@ loadLesson();
 
 const loadDataByLevel = async (level) => {
   const loader = document.getElementById("loader");
+
+
+  const searchCardContainer = document.getElementById("founded-data");
+
   const cardContainer = document.getElementById("card-container");
 
   loader.classList.remove("hidden");
+  searchCardContainer.classList.add("hidden")
+
+  const search = document.getElementById("input")
+  search.value =""
   cardContainer.classList.add("opacity-0");
 
   try {

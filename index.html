@@ -15,7 +15,9 @@
       rel="stylesheet"
       type="text/css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script 
+    src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
+    </script>
 
     <title>English | জানালা</title>
     <style>
@@ -165,6 +167,7 @@
             <input
               id="username"
               type="text"
+              value="abd"
               class="input outline-none"
               placeholder="Enter Your Name"
             />
@@ -172,6 +175,7 @@
               id="password"
               type="text"
               class="input outline-none"
+              value="123456"
               placeholder="Enter Your Password (123456)"
             />
 
@@ -192,6 +196,30 @@
     <section class="mx-auto w-[90%]">
       <main>
         <section id="learn-section" class="hidden mt-[20vh] pt-[150px]">
+
+<!-- newly added -->
+          <div action="" class="mb-15">
+
+            <input type="text" class="w-full py-2 items-center text-xl text-center rounded-lg" id="input"><span>
+
+              <button id="submit" class=" py-2 items-center text-center text-xl rounded-lg bg-blue-600 cursor-pointer text-white w-full">Search</button>
+            </span>
+
+          </div>
+
+
+          <div class="" id="founded-data">
+
+
+<!-- Dynamic searched card  -->
+
+          </div>
+
+
+
+
+
+
           <h3 class="font-semibold text-3xl text-center font-[poppins]">
             <span class="text-[#00BCFF]">Let's</span>
             <span>Learn Vocabularies</span>
@@ -465,5 +493,6 @@
     <script src="pronounceWord.js"></script>
     <script src="openModal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="search.js"></script>
   </body>
 </html>
